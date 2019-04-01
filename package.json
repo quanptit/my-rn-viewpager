@@ -1,0 +1,21 @@
+{
+  "name": "my-rn-viewpager",
+  "version": "1.0.1",
+  "description": "my-rn-common-resource",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ads"
+  ],
+  "author": "Quan Trinh Van",
+  "license": "Quan Trinh Van",
+  "nativePackage": true,
+  "dependencies": {
+    "rn-viewpager": "^1.2.9"
+  },
+  "devDependencies": {},
+  "peerDependencies": {}
+}
