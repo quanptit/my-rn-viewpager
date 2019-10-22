@@ -1,8 +1,8 @@
 import React, {ReactChild} from 'react';
-import {ViewPagerAndroidOnPageScrollEventData, View} from "react-native";
+import {View, default as ReactNative} from "react-native";
 import {StyleUtils, PureComponentSkipFunction} from "my-rn-base-component";
-import {ViewPager, ViewPagerProps} from 'rn-viewpager';
 import {ViewPagerItemContainer} from "./ViewPagerItemContainer";
+import ViewPager, {ViewPagerOnPageSelectedEventData, ViewPagerProps} from "@react-native-community/viewpager";
 
 const s = StyleUtils.getAllStyle();
 const RENDER_PAGES_PACE = 2;
@@ -89,8 +89,8 @@ export class ViewPagerPerformance extends PureComponentSkipFunction<Props> {
     //endregion
 
 
-    private _onPageSelected(e: ViewPagerAndroidOnPageScrollEventData) {
-        this.currentPageIndex = e.position;
+    private _onPageSelected(e: ReactNative.NativeSyntheticEvent<ViewPagerOnPageSelectedEventData>) {
+        this.currentPageIndex = e.nativeEvent.position;
         this.indicator && this.indicator.onPageSelected(this.currentPageIndex);
         this.updatePageRender();
         this.props.onPageSelected(e);

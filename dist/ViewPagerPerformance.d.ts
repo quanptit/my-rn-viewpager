@@ -1,6 +1,6 @@
 import { ReactChild } from 'react';
 import { PureComponentSkipFunction } from "my-rn-base-component";
-import { ViewPagerProps } from 'rn-viewpager';
+import { ViewPagerProps } from "@react-native-community/viewpager";
 interface Props extends ViewPagerProps {
     data: any[];
     renderPageItem: (info: {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { View } from "react-native";
 import { StyleUtils, PureComponentSkipFunction } from "my-rn-base-component";
-import { ViewPager } from 'rn-viewpager';
 import { ViewPagerItemContainer } from "./ViewPagerItemContainer";
+import ViewPager from "@react-native-community/viewpager";
 const s = StyleUtils.getAllStyle();
 const RENDER_PAGES_PACE = 2;
 export class ViewPagerPerformance extends PureComponentSkipFunction {
@@ -64,7 +64,7 @@ export class ViewPagerPerformance extends PureComponentSkipFunction {
     }
     //endregion
     _onPageSelected(e) {
-        this.currentPageIndex = e.position;
+        this.currentPageIndex = e.nativeEvent.position;
         this.indicator && this.indicator.onPageSelected(this.currentPageIndex);
         this.updatePageRender();
         this.props.onPageSelected(e);

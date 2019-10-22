@@ -5,16 +5,23 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "install_npm": "yarn install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "ads"
+    "react-native"
   ],
   "author": "Quan Trinh Van",
-  "license": "Quan Trinh Van",
-  "nativePackage": true,
+  "license": "ISC",
+  "homepage": "https://github.com/quanptit/my-rn-viewpager",
+  "bugs": "https://github.com/quanptit/my-rn-viewpager/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quanptit/my-rn-viewpager.git"
+  },
+  "nativePackage": false,
   "dependencies": {
-    "rn-viewpager": "^1.2.9"
+    "@react-native-community/viewpager": "latest"
   },
   "devDependencies": {},
   "peerDependencies": {}
